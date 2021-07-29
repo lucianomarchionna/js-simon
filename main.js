@@ -15,7 +15,7 @@ console.log(numeri)
 alert("Questi sono i 5 numeri che devi ricordare: " + numeri);
 
 // Da li parte un timer di 30 secondi.
-setTimeout(memorizzazione, 3000);
+setTimeout(memorizzazione, 30000);
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 var i = 0;
 var numeriUtente;
@@ -27,10 +27,14 @@ function memorizzazione(){
         if(isInArray(numeri, numeriUtente) == true){
             numeriGiusti.push(numeriUtente);     
         }
-        alert("Hai indovinato: " + numeriGiusti.length); 
+        // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+        alert("Hai indovinato: " + numeriGiusti.length);
+        console.log("Hai indovinato: " + numeriGiusti.length);
+        alert('I numeri che hai indovinato sono: ' + numeriGiusti);
+        console.log('I numeri che hai indovinato sono: ' + numeriGiusti);
     }
 }
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
 // FUNZIONI
 
 // Funziione che crea numeri casuali
